@@ -1,0 +1,882 @@
+/* basic css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body
+{
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    /* background-color: darkblue; */
+}
+
+/* **************************************************** */
+/* ************ css to set background color************ */
+/* **************************************************** */
+
+
+.bg-red
+{
+    background-color: red;
+}
+
+.bg-yellow
+{
+    background-color: yellow;
+}
+
+.bg-green
+{
+    background-color: green;
+}
+
+.bg-pink
+{
+    background-color: pink;
+}
+
+.bg-light
+{
+    background-color: white;
+}
+
+.bg-dark
+{
+    background-color: black;
+}
+
+.bg-cyan
+{
+    background-color: cyan;
+}
+
+.bg-blue
+{
+  background-color: blue;
+}
+
+.bg-transperent
+{
+    background-color: transparent;
+}
+
+/* ******************************************* */
+/* ************ css for the NAVBAR************ */
+/* ******************************************* */
+
+.container-nav {
+  height: 60px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+}
+
+.navbar
+{
+  justify-content: center;
+}
+
+.container-nav .logo {
+  max-width: 250px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.container-nav .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+}
+
+.container-nav .logo a img {
+  max-width: 100%;
+  max-height: 60px;
+}
+
+.container-nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.container-nav .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container-nav .navbar ul li
+{
+  margin: 0rem 1rem 0rem 1rem;
+}
+@media (max-width:785px)
+{
+  .container-nav .navbar ul li
+  {
+    margin: 0;
+  }
+}
+
+.container-nav .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.container-nav .navbar ul li a:hover {
+  color: #0BCEAF;
+}
+
+.active
+{
+  color: #0BCEAF!important;
+}
+
+.container-nav .navbar ul .close {
+  display: none;
+  text-align: right;
+  padding: 10px;
+}
+
+.container-nav .navbar ul .close span {
+  font-size: 40px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.container-nav .navbar .icon-bar {
+  padding: 18px 8px;
+  width: 50px;
+  height: 60px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.container-nav .navbar .icon-bar i {
+  background-color: black;
+  height: 2px;
+}
+
+@media only screen and (max-width: 650px) {
+  .container-nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .container-nav .logo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .container-nav .navbar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+
+  .container-nav .navbar ul {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+  }
+
+  .container-nav .navbar ul li a {
+    padding: 10px;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    color: #555555;
+  }
+
+  .container-nav .navbar ul .close {
+    display: block;
+  }
+
+  .container-nav .navbar .icon-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .container-nav .navbar ._Menus-show {
+    left: 0;
+  }
+}
+
+/* ************************************************** */
+/* ************ css for the BRANDING TEXT************ */
+/* *************************************************** */
+#branding-text
+{
+  margin: 0;     
+  font-weight: 900 !important; 
+  font-size: 2.5rem; 
+  font-family:"Roboto", sans-serif;
+}
+
+#branding-first-span
+{
+  color:#0BCEAF
+}
+
+#branding-second-span
+{
+  color: black;
+}
+
+/* ************************************************* */
+/* ************ css for the HOME section************ */
+/* ************************************************* */
+
+.container-home
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+    width: 100%;
+    height: calc(100vh - 0px);
+    max-height: calc(100vh-0px);
+    background-color: #0BCEAF!important;
+    padding-top: 7rem;
+}
+
+#heading-image
+{
+    flex-basis: 50%;
+    justify-content: center;
+    text-align: center;
+    /* padding-right: 4rem; */
+    
+}
+
+#heading-text
+{
+    flex-basis: 50%;
+    text-align: left;
+}
+
+#self-img
+{
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 400px;
+    border-radius: 50% ;
+
+}
+
+#first-heading
+{
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#name-heading
+{
+    margin: 0;
+    font-size: calc(1.575rem + 5vw);
+    font-weight: 900!important;
+    font-family:"Roboto", sans-serif;
+    color: transparent;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#last-heading
+{
+    margin: 0px;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size:calc(1.575rem + 2vw) ;
+    font-weight: 100;
+}
+
+.heading-stroke
+{
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.button-container
+{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container button
+{
+    margin-right: 3em;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.7rem;
+    border: 2px solid white;
+    border-radius: 100px;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    overflow: auto;
+}
+
+.button-container button:hover
+{
+    background-color: white;
+    color: black;
+    filter: brightness(110%);
+}
+
+.button-container button:active
+{
+    transform: translate(0 , 0.3rem);
+}
+
+@media screen and (max-width:965px) 
+{
+    .container-home
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: auto;
+        box-sizing: content-box;
+        height: auto;
+    }
+    #heading-text
+    {
+        text-align: center;
+        align-items: center;
+    }
+
+    .button-container
+    {
+      margin-top: 0em;
+    }
+
+}
+@media (max-width:420px)
+{
+    #self-img
+    {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
+
+
+/* ********************************************************** */
+/* ************ css for the MAIN SECTION HEADINGS************ */
+/* ********************************************************** */
+.section-main-cntainer
+{
+    display: flex;
+}
+
+.heading-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lower-heading
+{
+    margin: 0;
+    font-size: 12vw;
+    font-family:"Roboto", sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #dee2e6;
+    z-index: -2;
+}
+
+.upper-heading
+{
+    position: absolute;
+    margin: 0;
+    font-family:"Roboto", sans-serif;
+    color: #0BCEAF !important;
+    font-weight: 900 !important;
+    font-size: 2.5vw;
+    line-height: 1.2;
+    z-index: -1;
+}
+
+
+/* ************************************************* */
+/* ************ css for the ABOUT secton************ */
+/* ************************************************* */
+
+.info-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 100%;
+    width: 100%;
+}
+
+.about-image-container
+{
+    flex-basis: 40%;
+    justify-content: center;
+    text-align: right;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+.about-information-container
+{
+    flex-basis: 60%;
+    text-align: left;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.about-img
+{
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  max-height: 600px;
+  border-radius: 4px;
+}
+
+#about-info-heading
+{
+  margin-bottom: 1.5rem !important;
+  font-weight: 700 !important;
+  font-size: calc(1.3rem + 0.6vw);
+  font-family: sans-serif;
+  line-height: 1.2;
+  color: #343a40;
+}
+
+#about-info-para1
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+  text-align: left;
+}
+#about-info-para2
+{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+  text-align: left;
+}
+
+.row
+{
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+}
+
+.fbasis-50
+{
+  flex-basis: 50%;
+}
+
+.info-title
+{
+  font-weight: 700 !important;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #343a40;
+}
+
+.info-span
+{
+  color: #6c757d !important;
+  font-weight: 400 !important;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+#info-download-button
+{
+  border: 2px solid #0BCEAF;
+  color: #0BCEAF;
+}
+
+/* media query to make about section responsive */
+@media (max-width:965px)
+{
+  .info-container
+  {
+    flex-direction: column;
+  } 
+
+  .about-image-container
+  {
+      flex-basis: 50%;
+      justify-content: center;
+      text-align: center;
+      padding-right: 15vw;
+      padding-left: 15vw;
+  }
+
+  .about-information-container
+  {
+      flex-basis: 50%;
+      text-align: left;
+      justify-content: center;
+      padding-right: 15vw;
+      padding-left: 15vw;
+      margin-top: 1rem;
+  }
+
+  .about-img
+  {
+    width: 100%;
+    max-width:unset;
+    height: auto;
+    max-height: 900px;
+  }
+}
+
+@media (max-width:570px)
+{
+  .row
+  {
+    flex-direction: column;
+  }
+  .fbasis-50
+  {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* *************************************************** */
+/* ************ css for the QUALITY secton************ */
+/* *************************************************** */
+#quality
+{
+  margin-top: 7rem;
+}
+
+.quality-card-container
+{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  width: 100%;
+}
+
+.card
+{
+  flex-basis: 100%;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.card-grid
+{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 1rem;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important;
+  background-color: white;
+}
+
+.grid-info-container
+{
+  text-align: left;
+  padding-left: 1.3rem;
+  background-color: #ffc107;
+}
+
+.edu-heading
+{
+  margin-bottom: 0;
+  font-weight: 700 !important;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #343a40;
+}
+.edu-small-text
+{
+  margin-top: 0;
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.edu-para
+{
+  margin-top: 3rem !important;
+  color: #6c757d;
+}
+
+.grid-img
+{
+  max-width: 100%;
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+}
+
+@media (max-width:770px)
+{
+  .card-grid
+  {
+    grid-template-columns: 100%;
+  }
+}
+
+/* ************************************************** */
+/* ************ css for the SKILLS secton************ */
+/* ************************************************** */
+#skill
+{
+  margin-top: 7rem; 
+}
+
+.skillbar-container
+{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.skill-subgrid
+{
+  padding-left: 1rem ;
+  padding-right:1rem ;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.progress-lable
+{
+  margin-bottom: 0;
+  margin-left: 35px;
+  font-weight: 700 !important;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #343a40;
+  font-family: "Roboto", sans-serif;
+}
+
+.progressbar
+{
+  margin-top: 0;
+}
+
+.progress {
+  display: inline-block;
+  width: 400px;
+  height: 20px;
+  margin-left: 35px;
+  margin-right:35px ;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  /* margin: 35px; */
+  border-radius: 20px;
+  background: #f9f9f9;
+}
+
+.bar {
+  border-radius: 20px;
+  width: 32%;
+  height: 100%;
+  transition: width;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.36,.55,.63,.48);
+  box-shadow: 0px 45px 50px rgba(0, 0, 0, 0.25);
+  background-color: aqua;
+}
+
+.lable-percentage
+{
+  /* float: right; */
+  margin-left: 20rem;
+}
+@media (max-width:1140px)
+{
+  .progress
+  {
+    width:280px ;
+  }
+  .lable-percentage
+  {
+    margin-left: 12rem;
+  }
+}
+@media (max-width:565px)
+{
+  .progress
+  {
+    width: 300px;
+  }
+}
+@media (max-width:432px)
+{
+  .progress
+  {
+    width: 200px;
+  }
+
+  .lable-percentage
+  {
+    margin-left: 7rem;
+  }
+}
+@media (max-width:275px)
+{
+  .progress
+  {
+    width: 150px;
+  }
+
+  .lable-percentage
+  {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width:770px)
+{
+  .skillbar-container
+  {
+    grid-template-columns: 100%;
+  }
+}
+
+.m-0
+{
+  margin: 0;
+}
+
+/* background color class for the progress bar */
+.bar-html
+{
+  background-color: #0BCEAF ;
+  width: 95%;
+}
+
+.bar-javascript
+{
+  background-color: #dc3545 ;
+  width: 90% ;
+}
+.bar-css
+{
+  background-color: #ffc107;
+  width: 85%;
+}
+
+.bar-angular
+{
+  background-color: #343a40;
+  width: 95%;
+}
+.bar-php
+{
+  background-color: #dc3545 ;
+  width:90% ;
+}
+
+.bar-wordpress
+{
+  background-color: #17a2b8;
+  width: 85%;
+}
+
+.bg-gray
+{
+  background-color: rgb(232, 232, 232);
+}
